@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RadioButtonUISample : MonoBehaviour
 {
+    public Sprite sprite;
     Toggle toggle1;
     Toggle toggle2;
     Toggle toggle3;
@@ -24,6 +25,10 @@ public class RadioButtonUISample : MonoBehaviour
         if (bChecked)
         {
             string text = toggle.GetComponentInChildren<Text>().text;
+            var image = toggle.transform.Find("Image")?.GetComponent<Image>();
+            if (image != null)
+                image.sprite = sprite;
+
             print($"{text} 변경됨 : {bChecked}");
         }
     }
