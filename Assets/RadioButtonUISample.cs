@@ -14,5 +14,21 @@ public class RadioButtonUISample : MonoBehaviour
         toggle1 = transform.Find("ToggleGroup/Toggle1").GetComponent<Toggle>();
         toggle2 = transform.Find("ToggleGroup/Toggle2").GetComponent<Toggle>();
         toggle3 = transform.Find("ToggleGroup/Toggle3").GetComponent<Toggle>();
+
+        toggle1.onValueChanged.AddListener(OnValueChanged1);
+        toggle2.onValueChanged.AddListener(OnValueChanged2);
+        toggle3.onValueChanged.AddListener(OnValueChanged3);
+    }
+    void OnValueChanged1(bool bChecked)
+    {
+        print(bChecked);
+    }
+    void OnValueChanged2(bool bChecked)
+    {
+        print(bChecked);
+    }
+    void OnValueChanged3(bool bChecked)
+    {
+        print(bChecked);
     }
 }
