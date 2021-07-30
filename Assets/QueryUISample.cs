@@ -11,7 +11,7 @@ public class QueryUISample : MonoBehaviour
     {
         Instance = this;
     }
-    
+
     GameObject buttonBase;
     void Start()
     {
@@ -26,6 +26,12 @@ public class QueryUISample : MonoBehaviour
         {
             var newButton = (GameObject)Instantiate(buttonBase, buttonBase.transform.parent);
             buttons.Add(newButton);
+            Button button = newButton.GetComponent<Button>();
+            button.onClick.AddListener(() => OnClick(button));
         }
+    }
+    void OnClick(Button button)
+    {
+
     }
 }
