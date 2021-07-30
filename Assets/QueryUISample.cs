@@ -16,6 +16,7 @@ public class QueryUISample : MonoBehaviour
     void Start()
     {
         buttonBase = transform.Find("ButtonGroup/Button").gameObject;
+        buttonBase.SetActive(false);
     }
 
     List<GameObject> buttons = new List<GameObject>();
@@ -31,6 +32,7 @@ public class QueryUISample : MonoBehaviour
         foreach (var buttonText in buttonTexts)
         {
             var newButton = (GameObject)Instantiate(buttonBase, buttonBase.transform.parent);
+            buttonBase.SetActive(true);
             buttons.Add(newButton);
             Button button = newButton.GetComponent<Button>();
             button.onClick.AddListener(() => OnClick(button));
