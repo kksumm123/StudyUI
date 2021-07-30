@@ -19,19 +19,26 @@ public class QueryUISample : MonoBehaviour
     }
 
     List<GameObject> buttons = new List<GameObject>();
-    internal void Show(string content, Action<string> fn, params string[] buttonTexts)
+    Action<string> fn;
+    internal void Show(string content, Action<string> _fn, params string[] buttonTexts)
     {
+        fn = _fn;
         buttons.ForEach(x => Destroy(x));
-        foreach (var item in buttonTexts)
+        buttons.Clear();
+
+        foreach (var buttonText in buttonTexts)
         {
             var newButton = (GameObject)Instantiate(buttonBase, buttonBase.transform.parent);
             buttons.Add(newButton);
             Button button = newButton.GetComponent<Button>();
             button.onClick.AddListener(() => OnClick(button));
+            newButton.GetComponentInChildren<Text>().text = buttonText;
         }
     }
     void OnClick(Button button)
     {
-
+        var text = button.GetComponentInChildren<Text>().text;
+        fn(text);
+        gameObject.SetActive(false);
     }
 }
