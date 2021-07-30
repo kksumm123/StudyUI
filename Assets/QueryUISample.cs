@@ -24,15 +24,12 @@ public class QueryUISample : MonoBehaviour
     internal void Show(string content, Action<string> _fn, params string[] buttonTexts)
     {
         fn = _fn;
-        buttons.ForEach(x => Destroy(x));
-        buttons.Clear();
-        
         transform.Find("ContentText").GetComponent<Text>().text = content;
 
         foreach (var buttonText in buttonTexts)
         {
             var newButton = (GameObject)Instantiate(buttonBase, buttonBase.transform.parent);
-            buttonBase.SetActive(true);
+            newButton.SetActive(true);
             buttons.Add(newButton);
             Button button = newButton.GetComponent<Button>();
             button.onClick.AddListener(() => OnClick(button));
@@ -44,5 +41,7 @@ public class QueryUISample : MonoBehaviour
         var text = button.GetComponentInChildren<Text>().text;
         fn(text);
         gameObject.SetActive(false);
+        buttons.ForEach(x => Destroy(x));
+        buttons.Clear();
     }
 }
