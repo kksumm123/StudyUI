@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DropDownUISameple : MonoBehaviour
 {
+
     Dropdown dropdown;
     void Start()
     {
@@ -13,6 +14,8 @@ public class DropDownUISameple : MonoBehaviour
     }
     void OnValueChanged(int selectedIndex)
     {
-        print(dropdown.options[selectedIndex].text);
+        string selectedText = dropdown.options[selectedIndex].text;
+        print(selectedText);
+        transform.Find("Selected/Text").GetComponent<Text>().text = selectedText;
     }
 }
