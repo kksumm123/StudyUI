@@ -26,7 +26,7 @@ public class QueryUISample : MonoBehaviour
         buttons.ForEach(x => Destroy(x));
         buttons.Clear();
         
-        transform.Find("ContentTextTr").GetComponent<Text>().text = content;
+        transform.Find("ContentText").GetComponent<Text>().text = content;
 
         foreach (var buttonText in buttonTexts)
         {
