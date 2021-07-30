@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Toggle
+  m_Text: "\uCD08\uCF54 \uC250\uC774\uD06C "
 --- !u!222 &63815244
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -286,6 +286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 302433089}
+  - component: {fileID: 302433090}
   m_Layer: 5
   m_Name: RadioButtonUISample
   m_TagString: Untagged
@@ -315,6 +316,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &302433090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302433088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991f457b11094b54c8caaaaf1b057496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &447782541
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +474,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Toggle
+  m_Text: "\uD5C8\uB2C8\uCF64\uBCF4 "
 --- !u!222 &456838998
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -481,7 +494,7 @@ GameObject:
   - component: {fileID: 475863675}
   - component: {fileID: 475863676}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: Toggle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1290,7 +1303,7 @@ GameObject:
   - component: {fileID: 1636612664}
   - component: {fileID: 1636612665}
   m_Layer: 5
-  m_Name: Toggle (1)
+  m_Name: Toggle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,7 +1377,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &2009574141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1543,7 @@ GameObject:
   - component: {fileID: 2079741225}
   - component: {fileID: 2079741226}
   m_Layer: 5
-  m_Name: Toggle (2)
+  m_Name: Toggle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1604,7 +1617,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &2081481844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,7 +1688,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Toggle
+  m_Text: "\uC2DC\uCE74\uACE0 \uD53C\uC790"
 --- !u!222 &2081481847
 CanvasRenderer:
   m_ObjectHideFlags: 0
