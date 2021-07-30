@@ -25,6 +25,7 @@ public class QueryUISample : MonoBehaviour
     {
         fn = _fn;
         transform.Find("ContentText").GetComponent<Text>().text = content;
+        DestroyButtons();
 
         foreach (var buttonText in buttonTexts)
         {
@@ -41,6 +42,11 @@ public class QueryUISample : MonoBehaviour
         var text = button.GetComponentInChildren<Text>().text;
         fn(text);
         gameObject.SetActive(false);
+        DestroyButtons();
+    }
+
+    private void DestroyButtons()
+    {
         buttons.ForEach(x => Destroy(x));
         buttons.Clear();
     }
