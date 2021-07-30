@@ -21,14 +21,14 @@ public class RadioButtonUISample : MonoBehaviour
     }
     void OnValueChanged1(bool bChecked)
     {
-        print(bChecked);
+        print($"OnValueChanged1 : {bChecked}");
     }
     void OnValueChanged2(bool bChecked)
     {
-        print(bChecked);
+        print($"OnValueChanged2 : {bChecked}");
     }
     void OnValueChanged3(bool bChecked)
     {
-        print(bChecked);
+        print($"OnValueChanged3 : {bChecked}");
     }
 }
